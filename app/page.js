@@ -22,7 +22,7 @@ export default function Home() {
           {/* Dashboard Content (Second row) */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
             {/* Activity Chart (First Column) */}
-            <div className="lg:col-span-2 bg-white p-4 rounded-lg shadow-md h-60  ">
+            <div className="lg:col-span-2 bg-white p-4 rounded-lg shadow-md h-64  ">
               {/* <ActivityChart /> */}
               <Barcomp />
             </div>

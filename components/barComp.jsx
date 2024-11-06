@@ -26,15 +26,15 @@ const customTooltip = ({active, payload, label }) => {
 
   return (
     
-    <div>
+    <div className=' h-full'>
       {/* Heading and Subheading */}
       <div style={{ marginBottom: '12px' }}>
-        <h2 style={{ fontSize: '16px', fontWeight: '900', color: '#333' }}>Activi</h2>
+        <h2 style={{ fontSize: '16px', fontWeight: '900', color: '#333' }}>Activities</h2>
         <p style={{ fontSize: '12px', color: '#888', marginTop: '4px' }}>Data for the last 12 months</p>
       </div>
 
-        <ResponsiveContainer width="100%" height="100%">
-        <BarChart data={data} margin={{right: 30}}>
+        <ResponsiveContainer width="100%" height="90%">
+        <BarChart data={data} margin={{right: 30, bottom: 20}}>
         <XAxis dataKey="week" />
         <YAxis axisLine={false} />
         <Legend layout="horizontal" align="right" verticalAlign="top" iconType="circle" iconSize={10} />
@@ -42,8 +42,8 @@ const customTooltip = ({active, payload, label }) => {
         <CartesianGrid vertical={false} />
         <Bar type="monotone" dataKey="guest" barSize={30} radius={[5, 5, 0, 0]} fill="#98D79E" />
         <Bar type="monotone" dataKey="user" barSize={30} radius={[5, 5, 0, 0]} fill="#EE8484" />
-  </BarChart>
-</ResponsiveContainer>
+        </BarChart>
+        </ResponsiveContainer>
 
 
       </div>
