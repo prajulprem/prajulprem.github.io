@@ -22,14 +22,14 @@ export default function Home() {
           {/* Dashboard Content (Second row) */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
             {/* Activity Chart (First Column) */}
-            <div className="lg:col-span-2 bg-white p-4 rounded-lg shadow-md h-60 relative ">
+            <div className="lg:col-span-2 bg-white p-4 rounded-lg shadow-md h-60  ">
               {/* <ActivityChart /> */}
-              <Barcomp  className=' z-50'/>
+              <Barcomp />
             </div>
 
             {/* Product Pie Chart (Second Column) */}
             <div className="lg:col-span-1 bg-white  rounded-lg shadow-md ">
-              <Piecomp className='' />
+              <Piecomp  />
             </div>
 
             {/* Add Profile Card (Third Column) */}
