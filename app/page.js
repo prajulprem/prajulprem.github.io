@@ -1,7 +1,6 @@
 'use client';
 import Layout from '../components/layout';
 import InfoCard from '../components/infoCard';
-import ProductPieChart from '../components/productPiechart';
 import AddProfile from '../components/addProfile';
 import Barcomp from '@/components/barComp';
 import Piecomp from '@/components/pieComp';
