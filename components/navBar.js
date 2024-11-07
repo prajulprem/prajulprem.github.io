@@ -9,7 +9,7 @@ const Navbar = () => (
     />
     <div className="flex items-center space-x-4">
       <img
-        src="/path/to/avatar.jpg" // Replace with your avatar image path
+        src="profile.png" // Replace with your avatar image path
         alt="User Avatar"
         className="h-8 w-8 rounded-full"
       />
