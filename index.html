@@ -1,22 +1,35 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Prajul Prem Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-    <link href="./output.css" rel="stylesheet" />
-</head>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
 
+    <link href="./output.css" rel="stylesheet">
+    <style>
+        @layer base {
+            body {
+                font-family: 'Inter', sans-serif;
+            }
+        }
+    </style>
+</head>
 <body class="font-[Inter] text-black">
 
     <!-- Header -->
     <header
-        class="bg-white/80 backdrop-blur-sm px-[2vw] py-[1rem] flex items-center justify-between font-semibold fixed top-0 left-0 right-0 z-50 ">
-        <div class="text-lg font-medium">* Prajul prem</div>
-        <ul class="flex items-center gap-6 group">
+        class="bg-white/80 backdrop-blur-sm px-[5vw] py-4 flex items-center justify-between font-semibold fixed top-0 left-0 right-0 z-50">
+        <div class="text-lg font-medium">* Prajul Prem</div>
+
+        <!-- Mobile Menu Button -->
+        <button id="menu-btn" class="md:hidden text-xl focus:outline-none">☰</button>
+
+        <!-- Desktop Nav -->
+        <ul id="nav-links" class="hidden md:flex items-center gap-6 group text-sm">
             <li><a href="#About" class="transition-opacity group-hover:opacity-50 hover:opacity-100">About</a></li>
             <li><a href="#skills" class="transition-opacity group-hover:opacity-50 hover:opacity-100">Skills</a></li>
             <li><a href="#contact" class="transition-opacity group-hover:opacity-50 hover:opacity-100">Contact</a></li>
@@ -27,15 +40,34 @@
         </ul>
     </header>
 
+    <!-- Mobile Nav Panel -->
+    <ul id="mobile-menu"
+        class="md:hidden hidden flex-col gap-4 px-[5vw] py-4 text-sm bg-white/90 fixed top-[4.5rem] left-0 right-0 z-40 backdrop-blur-sm border-t border-gray-200">
+        <li><a href="#About" class="block">About</a></li>
+        <li><a href="#skills" class="block">Skills</a></li>
+        <li><a href="#contact" class="block">Contact</a></li>
+        <li><a href="https://drive.google.com/file/d/1ftF5JXTEFZvW2TGVoqUBDJowtRvQ7LXa/view?usp=sharing" class="block"
+                download>My Resume</a></li>
+    </ul>
+
+    <!-- Borgir -->
+    <script>
+        const menuBtn = document.getElementById("menu-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+        menuBtn.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+        });
+    </script>
+
     <!-- Hero -->
-    <section class="h-screen px-[2vw] pt-[6rem] pb-[2rem] flex flex-col justify-between">
-        <div class="max-w-[25rem] text-lg">
+    <section class="min-h-screen px-[5vw] pt-[7rem] pb-8 flex flex-col justify-between gap-8">
+        <div class="text-lg max-w-md">
             I'm a web developer and designer who loves to code. I'm from Bangalore and open to work.
         </div>
 
-        <div class="flex justify-between flex-wrap items-end gap-6">
-            <div class="text-7xl font-medium">PRAJUL</div>
-            <ul class="flex gap-6 font-bold group">
+        <div class="flex flex-col sm:flex-row sm:justify-between sm:items-end gap-6">
+            <div class="text-5xl sm:text-7xl font-medium">PRAJUL</div>
+            <ul class="flex flex-wrap gap-4 font-bold group text-sm">
                 <li><a href="https://github.com/prajulprem"
                         class="transition-opacity group-hover:opacity-50 hover:opacity-100">GitHub</a></li>
                 <li><a href="https://www.linkedin.com/in/prajul-prem017"
@@ -44,33 +76,34 @@
             </ul>
         </div>
     </section>
-    <!-- About Section -->
-    <section id="About" class="min-h-[60vh] px-[2vw] pt-[6rem] pb-[3rem] bg-white flex flex-col justify-center gap-6">
-        <h2 class="text-4xl font-light mb-4">About Me</h2>
-    
-        <p class="max-w-3xl text-lg text-gray-800 leading-relaxed">
-            I'm a Computer Science undergrad with a knack for building clean, user-focused digital experiences. From writing
-            efficient code to understanding what users actually need, I enjoy bridging the gap between tech and people. I’ve
-            worked on web dashboards, IoT integrations, and even a few side projects that were born out of late-night ideas
-            and too much caffeine.
-        </p>
-    
-        <p class="max-w-3xl text-lg text-gray-800 leading-relaxed">
-            I care deeply about reliability and support — not just building things, but making sure they work, scale, and
-            evolve.
-        </p>
-    
-        <p class="max-w-3xl text-lg text-gray-800 leading-relaxed">
-            Outside of code, you’ll probably find me sketching interfaces, writing down half-baked product ideas, or
-            reorganizing my workspace for the fifth time in a week.
+
+    <!-- About -->
+    <section id="About" class="min-h-[60vh] px-[5vw] pt-[6rem] pb-[3rem] bg-white flex flex-col justify-center gap-6">
+        <h2 class="text-3xl sm:text-4xl font-light mb-4">About Me</h2>
+        <p class="text-base sm:text-lg text-gray-800 leading-relaxed max-w-3xl">
+            <p class="max-w-3xl text-lg text-gray-800 leading-relaxed">
+                I'm a Computer Science undergrad with a knack for building clean, user-focused digital experiences. From writing
+                efficient code to understanding what users actually need, I enjoy bridging the gap between tech and people. I’ve
+                worked on web dashboards, IoT integrations, and even a few side projects that were born out of late-night ideas
+                and too much caffeine.
+            </p>
+            
+            <p class="max-w-3xl text-lg text-gray-800 leading-relaxed">
+                I care deeply about reliability and support — not just building things, but making sure they work, scale, and
+                evolve.
+            </p>
+            
+            <p class="max-w-3xl text-lg text-gray-800 leading-relaxed">
+                Outside of code, you’ll probably find me sketching interfaces, writing down half-baked product ideas, or
+                reorganizing my workspace for the fifth time in a week.
+            </p>
         </p>
     </section>
 
-
-    <!-- Skills -->
-    <section class="min-h-screen bg-white px-[2vw] pt-[6rem] pb-[3rem] flex flex-col justify-center gap-8" id="skills">
-        <h2 class="text-4xl font-bold mb-4">Skills</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-base">
+    <!-- Skills section -->
+    <section class="min-h-screen bg-white px-[5vw] pt-[6rem] pb-[3rem] flex flex-col justify-center gap-8" id="skills">
+        <h2 class="text-3xl sm:text-4xl font-bold mb-4">Skills</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-base">
             <div>
                 <h3 class="font-semibold text-lg mb-2">Languages</h3>
                 <ul class="list-disc list-inside">
@@ -104,33 +137,26 @@
         </div>
     </section>
 
-    <!-- Contact -->
-    <!-- Footer Section -->
-    <section class="min-h-[50vh] bg-amber-50 px-[2vw] pt-[6rem] pb-[2rem] flex flex-col justify-between" id="contact">
-        <div class="text-2xl font-semibold mb-8">
-            Let's make something cool together.
-        </div>
-    
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-base">
+    <!-- Footer -->
+    <section class="min-h-[50vh] bg-amber-50 px-[5vw] pt-[6rem] pb-[2rem] flex flex-col justify-between" id="contact">
+        <div class="text-xl sm:text-2xl font-semibold mb-8">Let's make something cool together.</div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 text-base">
             <div>
                 <p class="mb-2 font-medium">Email me maybe? 📬</p>
                 <p class="text-gray-700">prajulprem017@gmail.com</p>
             </div>
-    
+            
             <div>
                 <p class="mb-2 font-medium">Open to opportunities:</p>
                 <p class="text-gray-700">Frontend · Fullstack · Freelance · Collaboration · Coffee chats ☕</p>
             </div>
         </div>
-    
         <div
-            class="mt-10 text-sm text-gray-600 border-t border-gray-300 pt-4 flex flex-col md:flex-row justify-between items-center gap-2">
+            class="mt-10 text-sm text-gray-600 border-t border-gray-300 pt-4 flex flex-col sm:flex-row justify-between items-center gap-2">
             <p>© 2025 Prajul Prem. Built with ☕, Tailwind, and probably too many tabs open.</p>
             <p class="italic text-xs">Fun fact: You just scrolled to the bottom. Respect.</p>
         </div>
     </section>
-
-
 </body>
 
 </html>
